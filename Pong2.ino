@@ -73,11 +73,8 @@ void loop() {
   static bool up_state = false;
   static bool down_state = false;
 
-  //int switchState = digitalRead(SW_pin);
   uint16_t yReading = readAxis(Y_pin);
 
-  //   auto reading = map(reading, 0, 1023, 0, range);
-  // int distance = reading - center;
   Serial.println(analogRead(yReading));
   if (time > ball_update) {
     uint8_t new_x = ball_x + ball_dir_x;
